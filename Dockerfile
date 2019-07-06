@@ -5,8 +5,8 @@ RUN set -ex; \
 		echo 'deb https://mirrors.tuna.tsinghua.edu.cn/debian stretch main contrib non-free'; \
 		echo 'deb https://mirrors.tuna.tsinghua.edu.cn/debian stretch-updates main contrib non-free'; \
 		echo 'deb https://mirrors.tuna.tsinghua.edu.cn/debian-security stretch/updates main contrib non-free'; \
-	 } | tee /etc/apt/sources.list
-    && apt-get -yqq update \
+	 } | tee /etc/apt/sources.list \
+	&& apt-get -yqq update \
     && apt-get install -y locales python-pip wget git
 	
 
